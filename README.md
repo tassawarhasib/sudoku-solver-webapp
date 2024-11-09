@@ -10,8 +10,7 @@ This project is a Sudoku-solving application built with Next.js. It provides a u
 ### Getting Started
 
 1. Clone the repository:
-   `git clone https://github.com/yourusername/sudoku-solver.git
-cd sudoku-solver`
+   `git clone https://github.com/tassawarhasib/sudoku-solver-webapp`
 
 2. Clone the repository:
    `npm install`
