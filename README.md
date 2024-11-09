@@ -6,6 +6,7 @@ This project is a Sudoku-solving application built with Next.js. It provides a u
 
 -   Solve Sudoku Puzzles: Users can input a puzzle, and the app uses a backtracking algorithm to solve it.
 -   Input Validation: Ensures that the user's input follows Sudoku rules, preventing duplicates in rows, columns, and 3x3 subgrids.
+-   Responsive UI: Displays a toast notification when the puzzle is solved.
 
 ### Getting Started
 
