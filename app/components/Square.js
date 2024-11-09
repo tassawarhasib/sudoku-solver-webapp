@@ -1,11 +1,13 @@
 import styles from "../styles/Game.module.css";
 import { validateInput, sanitizeInput } from "../lib/sudokuUtils";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Square = (props) => {
     const [invalid, setInvalid] = useState(false);
 
-    const showInvalidInputAlert = () => alert("Invalid");
+    // const showInvalidInputAlert = () => alert("Invalid");
+    const showInvaidToast = () => toast.warning("Invaid Input");
 
     const handleInputValue = (flag, val) => {
         let newSquares = props.squares;
@@ -29,7 +31,9 @@ const Square = (props) => {
         }
         const val = sanitizeInput(e);
         if (val === -1 || !validateInput(newSquares, row, col, val)) {
-            showInvalidInputAlert();
+            // showInvalidInputAlert();
+            showInvaidToast();
+
             handleInputValue(true, e.target.value);
         } else {
             handleInputValue(false, val);

@@ -1,11 +1,15 @@
 import styles from "../styles/Game.module.css";
 import { createEmptyBoard } from "../lib/sudokuUtils";
 import solveSudoku from "../lib/solveSudoku";
+import { toast } from "react-toastify";
 
 
 const Solve = ({ squares, setSquares, setUserInput, setSolved, invalid, solved }) => {
 
-    const showSuccessAlert = () => alert('Solved');
+    // const showSuccessAlert = () => alert('Solved');
+    const showSuccessToast = () => toast.success("Successfully Solved");
+    const showResetToast = () => toast.error("Board Reset");
+
 
 
     const handleClick = (action) => {
@@ -13,12 +17,14 @@ const Solve = ({ squares, setSquares, setUserInput, setSolved, invalid, solved }
             const solvedSquares = solveSudoku(squares);
             setSquares(solvedSquares);
             setSolved(true);
-            showSuccessAlert();
+            showSuccessToast();
+            // showSuccessAlert();
 
         } else {
             setSquares(createEmptyBoard);
             setUserInput(createEmptyBoard);
             setSolved(false);
+            showResetToast();
         }
     };
 
