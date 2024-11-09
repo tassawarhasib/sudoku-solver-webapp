@@ -27,6 +27,13 @@
     margin: auto;
 }
 
+.square:nth-child(3n + 1) {
+    border-left: 3px solid #333;
+}
+.square:nth-child(3n) {
+    border-right: 3px solid #333;
+}
+
 .square.invalid {
     border-color: #f44336;
     color: #f44336;
