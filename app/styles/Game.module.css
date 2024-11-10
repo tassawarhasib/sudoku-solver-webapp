@@ -47,9 +47,10 @@
 
 #solvebtn,
 #resetbtn {
+    font-size: 18px;
     border: none;
     text-decoration: none;
-    padding: 1rem;
+    padding: 15px 20px 15px 20px;
     border-radius: 5px;
     margin: 0 1rem;
 }
@@ -57,6 +58,7 @@
 #solvebtn:hover,
 #resetbtn:hover {
     cursor: pointer;
+    font-weight: 600;
 }
 
 #solvebtn:disabled,
@@ -80,7 +82,12 @@
 
 @media (max-width: 550px) {
     .square {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
+    }
+    #solvebtn,
+    #resetbtn {
+        font-size: 15px;
+        padding: 10px 15px;
     }
 }
